@@ -3,7 +3,7 @@ class AddProducts < ActiveRecord::Migration[6.1]
     Product.create 
     ({
       :title => 'Hawaiian', 
-      :description => 'THis is Hawaiian pizza', 
+      :description => 'This is Hawaiian pizza', 
       :prise => 350, 
       :size => 30, 
       :is_spicy => false, 
