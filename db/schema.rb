@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_06_15_181038) do
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.decimal "prise"
+    t.decimal "price"
     t.decimal "size"
     t.boolean "is_spicy"
     t.boolean "is_veg"

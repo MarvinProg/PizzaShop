@@ -4,25 +4,39 @@
 
 	<% @products.each do |p| %>
 	<div class="col-md-3">
-		<%= p.title %>
+		<div>
+			<%= p.title %>
+		</div>
+
+		<div>
+			<img src="<%= p.path_to_image %>" />
+		</div>
+
+		<div>
+			<%= p.description %>
+		</div>
+
+		<div>
+			Price: <%= p.size %> cm
+		</div>
+
+		<div>
+			Spicy: <%= p.is_spicy %>
+		</div>
+
+		<div>
+			Vegan: <%= p.is_veg %>
+		</div>
+
+		<div>
+			Best offer: <%= p.is_best_offer %>
+		</div>
+
+		<div>
+			Price: <%= p.price %> rub
+		</div>
 	</div>
 
-	<div>
-		<img src="<%= p.path_to_image %>" />
-	</div>
-
-	<div class="col-md-3">
-		<%= p.description %>
-	</div>
-
-	<div class="col-md-3">
-		<%= p.title %>
-	</div>
-
-	<div class="col-md-3">
-		<%= p.title %>
-	</div>
-		
 	<% end %>
 
 </div>
