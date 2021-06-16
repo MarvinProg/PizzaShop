@@ -1,4 +1,14 @@
 <h2>Welcome to Pizza Shop!</h2>
 
+<div class="row">
+
+	<% @products.each do |p| %>
+	<div class="col-md-3">
+		<%= p.title %>
+	</div>
+	<% end %>
+
+</div>
+
 <button class="btn btn-primary btn-large" onclick="something()">Click me!</button>
 
