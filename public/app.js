@@ -21,7 +21,7 @@ function add_to_cart(id)
 
 function cart_get_namber_of_items()
 {
-	for(var i = 0; < window.localStorage.length; i++)
+	for(var i = 0; i < window.localStorage.length; i++)
 	{
 		var key = window.localStorage.key(i);
 		var value = window.localStorage.getItem(key);
