@@ -20,6 +20,8 @@ function add_to_cart(id)
 	update_orders_button();
 }
 
+// + to public/js/main.js
+
 function cart_get_namber_of_items()
 {
 	var cnt = 0;
