@@ -11,28 +11,6 @@ class Product < ActiveRecord::Base
   
 end
 
-get '/' do
-  @products = Product.all
-  erb :index  
-end
-
-get '/about' do
-  erb :about
-end
-
-post '/cart' do
-  orders_input = params[:orders_input]
-  @items = parse_orders_input orders_input
-  
-  @items.each do |item|
-    #id, cnt
-    item[0] = Product.find(item[0])
-
-  end
-
-  erb :cart
-end
-
 def parse_orders_input orders_input
 
   s1 = orders_input.split(/,/)
@@ -55,6 +33,29 @@ def parse_orders_input orders_input
   
 end
 
+get '/' do
+  @products = Product.all
+  erb :index  
+end
+
+get '/about' do
+  erb :about
+end
+
+post '/cart' do
+  @orders_input = params[:orders_input]
+  @items = parse_orders_input @orders_input
+  
+  @items.each do |item|
+    #id, cnt
+    item[0] = Product.find(item[0])
+
+  end
+
+  @o = {}
+
+  erb :cart
+end
 
 configure do
   enable :sessions
