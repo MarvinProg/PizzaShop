@@ -11,6 +11,10 @@ class Product < ActiveRecord::Base
   
 end
 
+class Order < ActiveRecord::Base
+
+end
+
 def parse_orders_input orders_input
 
   s1 = orders_input.split(/,/)
