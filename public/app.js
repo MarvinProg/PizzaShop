@@ -59,7 +59,7 @@ function cart_get_orders()
 	for(var i = 0; i < window.localStorage.length; i++)
 	{
 		var key = window.localStorage.key(i);
-		var value = window.localStorage.getItem(key);
+		var value = window.localStorage.getItem(key)*1;
 	
 		if(key.indexOf('product_') == 0) 
 		{
